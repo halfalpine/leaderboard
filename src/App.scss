@@ -1,0 +1,119 @@
+// Color palette
+$fcc-color: rgb(34,78,15);
+$thead-text-color: #d5dde5;
+$thead-br-color: #1b1e24;
+$thead-border-color: #343a45;
+
+// Fonts
+// @import url(https://fonts.googleapis.com/css?family=Roboto:100,400);
+// @import url(https://allfont.net/allfont.css?fonts=saxmono);
+$primary-font: 'Roboto', sans-serif;
+$fcc-font: 'saxMono', monospace, sans-serif;
+
+// Table dimensions
+$t-ranking-width: 40px;
+
+// Gereral formatting
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+body {
+  margin: 0;
+}
+
+navbar {
+  position: fixed;
+  top: 0;
+  height: 50px;
+  background: $fcc-color;
+  width: 100%;
+  a {
+    line-height: 50px;
+    vertical-align: middle;
+    padding-left: 15px;
+  }
+  img {
+    height: 40px;
+    vertical-align: middle;
+  }
+}
+
+#root {
+  margin: 100px auto;
+  padding: 20px;
+  width: 80%;
+  font-family: $primary-font;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-radius: 5px;
+  border-collapse: collapse;
+}
+
+thead {
+  th {
+    color: $thead-text-color;
+    letter-spacing: 1px;
+    background: $thead-br-color;
+    padding: 12px 2px;
+    font-size: 24px;
+    font-weight: 100;
+    border-right: 1px solid $thead-border-color;
+    text-rendering: optimizeLegibilty;
+  }
+  th:nth-child(1) {
+    width: 40px;
+    border-top-left-radius: 5px;
+  }
+  th:nth-child(2) {
+    width: 40%;
+  }
+  th:nth-child(3) {
+    width: 25%;
+  }
+  th:nth-child(4) {
+    width: 25%;
+    border-top-right-radius: 5px;
+    border-right: none;
+  }
+  th:hover {
+    cursor: pointer;
+  }
+}
+
+tbody {
+  tr:nth-child(odd) {
+    background: #ebebeb;
+  }
+  tr:nth-child(even) {
+    background: #ffffff;
+  }
+  td {
+    padding: 10px 15px;
+    border: 1px solid rgb(200,200,200);
+  }
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255,255,255);
+  background: $fcc-color;
+  height: 50px;
+  font-family: $fcc-font;
+  font-size: 18px;
+}
