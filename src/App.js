@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 
-class Leaderboard extends React.Component {
+class Leaderboard extends Component {
   constructor() {
     super();
 
@@ -35,7 +35,6 @@ class Leaderboard extends React.Component {
   }
 
   getCamperData() {
-    const corsFilter = 'https://cors-anywhere.herokuapp.com/';
     const recentPointsURL = 'https://fcctop100.herokuapp.com/api/fccusers/top/recent';
     const alltimePointsURL = 'https://fcctop100.herokuapp.com/api/fccusers/top/alltime';
     fetch(recentPointsURL)
@@ -83,7 +82,7 @@ const TableHead = ({handleHeadingClick}) =>
   </thead>
 
 const TableBody = ({campers, view}) => {
-  const tableRows = (view == 'name')
+  const tableRows = (view === 'name')
     ? (campers
       .sort((x, y) => (x[view].toUpperCase() < y[view].toUpperCase() ? -1 : 1))
       .map((camper, i) => (
